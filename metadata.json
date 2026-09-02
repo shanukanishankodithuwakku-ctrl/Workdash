@@ -1,0 +1,6 @@
+{
+  "name": "WorkDash",
+  "description": "A professional work shifts and hours dashboard with Google Sheets integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

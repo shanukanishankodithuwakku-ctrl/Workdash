@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* --- Haze Dark Emerald & Slate Theme Variables --- */
+:root {
+  --bg-layout: #0C1015;     /* Deep slate background */
+  --bg-card: #161C24;       /* Slate card background */
+  --bg-secondary: #232D3B;  /* Slightly lighter slate (for hover/inputs) */
+  --text-primary: #F8FAFC;  /* Bright off-white */
+  --text-muted: #8F9CA9;    /* Secondary slate gray/teal */
+  --accent-green: #00B388;  /* Vibrant Emerald Haze Green */
+  --border-color: #222C38;  /* Subtle slate border */
+}
+
+/* Base Body Override */
+body {
+  background-color: var(--bg-layout) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-sans);
+}
+
+/* Overriding cards and panels to match the Haze slate card aesthetic */
+.bg-white,
+.bg-slate-900, 
+.bg-slate-950,
+.bg-slate-900\/50,
+.bg-slate-900\/30,
+.bg-slate-900\/40,
+.bg-slate-900\/60,
+.bg-slate-950\/95,
+.bg-slate-950\/80,
+.bg-slate-950\/60,
+.bg-slate-950\/40,
+.bg-slate-950\/50,
+.bg-slate-850,
+.bg-slate-800,
+.bg-slate-800\/60,
+.bg-indigo-950\/30,
+.bg-indigo-950\/20,
+.bg-emerald-950\/20 {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Ensure all options box/select and input container boxes are matching and dark */
+input, select, textarea {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+  border-radius: 12px !important;
+  font-weight: 500 !important;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent-green) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(0, 179, 136, 0.15) !important;
+}
+
+/* Dropdown option items in Haze Dark theme */
+select option {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Modals backdrop */
+.fixed.inset-0.bg-slate-950\/80,
+.fixed.inset-0.bg-slate-950\/60,
+.fixed.inset-0.bg-slate-950\/50,
+.fixed.inset-0.bg-slate-950 {
+  background-color: rgba(12, 16, 21, 0.8) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* All text colors mapping for slate sub-texts */
+.text-slate-300, 
+.text-slate-400, 
+.text-slate-500,
+.text-slate-600,
+.text-slate-700,
+.text-slate-800,
+.text-slate-850,
+.text-slate-200,
+.text-slate-450,
+.text-slate-550,
+.text-indigo-400,
+.text-indigo-600,
+.text-indigo-500,
+.text-emerald-600 {
+  color: var(--text-muted) !important;
+}
+
+/* Highlighted texts or values */
+span.font-bold, 
+strong,
+h1, h2, h3, h4, h5, h6, 
+.font-extrabold, 
+.font-black,
+.text-slate-900 {
+  color: var(--text-primary) !important;
+}
+
+/* Borders override */
+.border-slate-800,
+.border-slate-850,
+.border-slate-900,
+.border-slate-800\/80,
+.border-slate-850\/80,
+.border-white\/5,
+.border-white\/10,
+.border-slate-200,
+.border-slate-100,
+.border-indigo-100,
+.border-indigo-200,
+.border-indigo-150,
+.border-indigo-500,
+.border-indigo-600 {
+  border-color: var(--border-color) !important;
+}
+
+/* Primary/Accent Buttons mapping to Haze Emerald Green */
+.bg-indigo-600, .bg-indigo-500, .bg-emerald-600, .bg-emerald-500 {
+  background-color: var(--accent-green) !important;
+  color: #FFFFFF !important;
+  border: 1px solid var(--accent-green) !important;
+}
+.bg-indigo-600:hover, .bg-indigo-500:hover, .bg-emerald-600:hover, .bg-emerald-500:hover {
+  background-color: #009E78 !important;
+  border-color: #009E78 !important;
+}
+
+/* Sub-panels and backgrounds like bg-indigo-50 or bg-emerald-50 */
+.bg-indigo-50, .bg-indigo-500\/10, .bg-emerald-50, .bg-emerald-500\/10, .bg-slate-50 {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Headings with secondary styling inside badges */
+.text-indigo-600, .text-indigo-500, .text-indigo-400 {
+  color: var(--accent-green) !important;
+}
+
+/* Header (nav bar) Haze Slate styling */
+header {
+  background-color: rgba(22, 28, 36, 0.9) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  backdrop-filter: blur(12px);
+}
+header span {
+  color: var(--text-primary) !important;
+}
+
+/* Nav links styling override - Ultra Minimalist */
+header nav button {
+  color: var(--text-muted) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+header nav button:hover {
+  color: var(--accent-green) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+header nav button[class*="text-indigo-400"], 
+header nav button[class*="text-indigo-600"],
+header nav button[class*="bg-white/5"] {
+  color: var(--accent-green) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  font-weight: 700 !important;
+}
+
+/* Table styling */
+table thead {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+table tbody tr:hover {
+  background-color: rgba(35, 45, 59, 0.4) !important;
+}
+
+/* Scrollbar styles override */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-layout) !important;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary) !important;
+  border-radius: 4px;
+  border: 2px solid var(--bg-layout);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2D3A4B !important;
+}
+
+/* driver-popover override for Haze Dark */
+.driver-popover {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Charts Tooltips */
+.recharts-default-tooltip {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Smooth background gradients to match Haze's emerald gradient banner */
+.bg-gradient-to-tr, .bg-gradient-to-br, .bg-gradient-to-r {
+  background-image: none !important;
+  background-color: var(--bg-card) !important;
+}
+
+/* Specific Welcome and Card green gradations to replicate the Haze overview banner */
+#tour-sync-section, 
+.relative.rounded-2xl.overflow-hidden.border.border-slate-200.shadow-sm.p-6.md:p-8,
+#tour-tax-card,
+.bg-white.p-6.rounded-2xl.border.border-slate-200.shadow-sm.flex.flex-col.justify-between {
+  background: linear-gradient(135deg, #161C24 0%, #0c352a 100%) !important;
+}
